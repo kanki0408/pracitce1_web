@@ -5,4 +5,6 @@
 ## 技術スタック
 - python:3.12.6
 - Flask <!--  webアプリケーションを簡単にするやつ -->
-- Dokker  
+- Docker  
+Docker起動方法
+docker-compose up --build
