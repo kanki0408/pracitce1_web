@@ -2,11 +2,15 @@ version: '3.8'
 
 services:
   web:
+    #dockerfileの場所を指定
     build: .
+    #ホスト側ポートと、コンテナ側のポートを接続する設定になります
     ports:
       - "5000:5000"
+    #環境変数の設定
     environment:
       - FLASK_APP=app.py
       - FLASK_ENV=development
+    #ホストPC内にあるリソース（主に変更のかかるソースファイルなど）をコンテナ内に共有できます
     volumes:
       - ./:/app
